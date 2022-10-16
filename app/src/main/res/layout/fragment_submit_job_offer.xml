@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SubmitJobOffer">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_backing"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/back" />
+
+            <ImageView
+                android:elevation="@dimen/_2sdp"
+                android:layout_width="@dimen/_220sdp"
+                android:layout_height="@dimen/_220sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/Imageprofile" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_175sdp"
+                android:background="@drawable/stilye_button_info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back"
+                android:layout_marginTop="@dimen/_150sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/textback" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/seting"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/textback"
+                app:layout_constraintTop_toTopOf="@id/textback"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/seting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Imageprofile"
+                android:text=""
+                app:layout_constraintStart_toStartOf="@id/textback"
+                app:layout_constraintEnd_toEndOf="@id/textback"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                style="@style/text"
+                android:id="@+id/name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:text=""
+                android:drawableStart="@drawable/telephone"
+                android:drawablePadding="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/textback"
+                app:layout_constraintEnd_toEndOf="@id/textback"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                style="@style/text"
+                android:id="@+id/numberphone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/textback"
+                app:layout_constraintStart_toStartOf="@id/textback"
+                app:layout_constraintTop_toBottomOf="@id/numberphone">
+
+                <TextView
+                    android:id="@+id/the_age"
+                    android:textColor="#13718D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/the_age"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:textColor="#13718D"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/gender"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/posation"
+                    android:textColor="#13718D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/posation"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/textback"
+                app:layout_constraintEnd_toEndOf="@id/textback"
+                app:layout_constraintTop_toBottomOf="@id/numberphone">
+
+                <TextView
+                    android:id="@+id/cuantry"
+                    android:textColor="#13718D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/country"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/qualification"
+                    android:textColor="#13718D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/qualification"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Social_status"
+                    android:textColor="#13718D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/social_status"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:background="@drawable/style_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_73sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textback"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/textbackdwon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                app:layout_constraintStart_toStartOf="@id/textbackdwon"
+                app:layout_constraintTop_toTopOf="@id/textbackdwon"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                style="@style/text"
+                android:id="@+id/textemail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwon"
+                app:layout_constraintTop_toTopOf="@id/textbackdwon"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textColor="#13718D"
+                android:id="@+id/email" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#13718D"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/viewone"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwon"
+                app:layout_constraintStart_toStartOf="@id/textbackdwon"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Bank"
+                app:layout_constraintStart_toStartOf="@id/textbackdwon"
+                app:layout_constraintTop_toBottomOf="@id/viewone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                style="@style/text"
+                android:id="@+id/textAcuontBink" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwon"
+                app:layout_constraintTop_toBottomOf="@id/viewone"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textColor="#13718D"
+                android:id="@+id/AcuontBank" />
+
+            <!--    <View-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="@dimen/_1sdp"-->
+            <!--        android:background="#13718D"-->
+            <!--        android:layout_marginStart="@dimen/_5sdp"-->
+            <!--        android:layout_marginEnd="@dimen/_5sdp"-->
+            <!--        android:id="@+id/viewtwo"-->
+            <!--        app:layout_constraintEnd_toEndOf="@id/textbackdwon"-->
+            <!--        app:layout_constraintStart_toStartOf="@id/textbackdwon"-->
+            <!--        app:layout_constraintTop_toBottomOf="@id/textAcuontBink"-->
+            <!--        android:layout_marginTop="@dimen/_5sdp"/>-->
+            <TextView
+                android:background="@drawable/style_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_73sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textbackdwon"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/textbackdwondwon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous experience"
+                app:layout_constraintStart_toStartOf="@id/textbackdwondwon"
+                app:layout_constraintTop_toTopOf="@id/textbackdwondwon"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                style="@style/text"
+                android:id="@+id/textexprice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwondwon"
+                app:layout_constraintTop_toTopOf="@id/textbackdwondwon"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textColor="#13718D"
+                android:id="@+id/exparice" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#13718D"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:id="@+id/viewthree"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwondwon"
+                app:layout_constraintStart_toStartOf="@id/textbackdwondwon"
+                app:layout_constraintTop_toBottomOf="@id/textexprice"
+                android:layout_marginTop="@dimen/_5sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cities_to_work_in"
+                app:layout_constraintStart_toStartOf="@id/textbackdwondwon"
+                app:layout_constraintTop_toBottomOf="@id/viewthree"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                style="@style/text"
+                android:id="@+id/textcauntreyjob" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/textbackdwondwon"
+                app:layout_constraintTop_toBottomOf="@id/viewthree"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textColor="#13718D"
+                android:id="@+id/countreyjob" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textbackdwondwon"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:id="@+id/l1"
+                android:layout_marginStart="@dimen/_10sdp"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_subscriptions"
+                    android:textColor="#13718D"
+                    android:id="@+id/subscriptions"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:fontFamily="@font/notolkeaarabic_bold"
+
+                    style="@style/text"
+                    android:textSize="@dimen/_20sdp"
+                    android:id="@+id/number_subscriptions" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#13718D" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                app:layout_constraintStart_toEndOf="@+id/l1"
+                app:layout_constraintTop_toBottomOf="@id/textbackdwondwon"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/appear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/appear"
+                    android:textColor="#13718D"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/number_appear"
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="20"
+                    android:textSize="@dimen/_20sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#13718D" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/textbackdwondwon"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/job_offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="@string/job_offers"
+                    android:textColor="#13718D"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/number_job_offers"
+                    style="@style/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/notolkeaarabic_bold"
+                    android:text="18"
+                    android:textSize="@dimen/_20sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#13718D" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout"
+                android:layout_marginTop="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/send_offers_job"
+                android:includeFontPadding="false"
+
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:backgroundTintMode="add"
+                android:background="@drawable/style_buttonsignup"
+                android:textSize="20sp"
+                android:elevation="3dp"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:id="@+id/SignUp_Searh_Work" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+</layout>

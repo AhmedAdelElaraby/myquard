@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.CreateEmaiLookingForAjob">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_backing"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:id="@+id/back" />
+
+
+    <TextView
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_email_looking_for_ajob"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textStyle="bold"
+            android:textColor="#13718D"
+            android:textSize="20sp"
+            android:id="@+id/textcreate" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutUsername"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            style="@style/text_input_style"
+
+            android:hint="@string/name_user"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textcreate">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
+                android:fontFamily="@font/notolkeaarabic_bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutnumberphone"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            style="@style/text_input_style"
+
+            android:hint="@string/number_phone"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberphone"
+                android:fontFamily="@font/notolkeaarabic_bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="@dimen/_13sdp"
+
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            style="@style/text_input_style"
+
+            android:hint="@string/email"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutnumberphone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Email"
+                android:fontFamily="@font/notolkeaarabic_bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/_13sdp"
+
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            style="@style/text_input_style"
+
+            android:hint="@string/password"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Password"
+                android:fontFamily="@font/notolkeaarabic_bold"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutconfertpassword"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            style="@style/text_input_style"
+
+            android:hint="@string/confirm_password"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutPassword">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmpassword"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioButton
+            android:textColor="#13718D"
+            android:buttonTint="#13718D"
+            android:text="@string/yes"
+            android:id="@+id/yes"
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/inputTextLayoutconfertpassword"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yes"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/send"
+            android:includeFontPadding="false"
+
+            android:fontFamily="@font/notolkeaarabic_bold"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:backgroundTintMode="add"
+            android:background="@drawable/style_buttonsignup"
+            android:textSize="20sp"
+            android:elevation="3dp"
+            android:textAllCaps="false"
+            android:id="@+id/Send" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/_85sdp"
+            app:layout_constraintTop_toBottomOf="@id/Send"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_15sdp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/spinkit"
+        android:visibility="gone"
+        android:elevation="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_380sdp"
+        style="@style/SpinKitView.Large.FadingCircle"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_gravity="center"
+        app:SpinKit_Color="#13718D"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

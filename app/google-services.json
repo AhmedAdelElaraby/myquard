@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "433343975019",
+    "firebase_url": "https://myguard-b07b0-default-rtdb.firebaseio.com",
+    "project_id": "myguard-b07b0",
+    "storage_bucket": "myguard-b07b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433343975019:android:58e423cea1f90ac6b76b2e",
+        "android_client_info": {
+          "package_name": "com.test.guard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433343975019-ccitf3d121k019blg80fnb3sqhfdg0q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAngkqoISVb_MSd7ys7O1y-Sb_3XuiEQ2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433343975019-ccitf3d121k019blg80fnb3sqhfdg0q0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "433343975019-k2m261b1n3nkpbhki84t0v4pdfdj7ivu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.TeraNinja.My-Gaurd"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_btn_nav"
+    app:startDestination="@id/homeMain">
+
+    <fragment
+        android:id="@+id/homeMain"
+        android:name="com.teraninja.guard.HomeMain"
+        android:label="fragment_home_main"
+        tools:layout="@layout/fragment_home_main" >
+        <action
+            android:id="@+id/action_homeMain_to_offers"
+            app:destination="@id/offers" />
+        <action
+            android:id="@+id/action_homeMain_to_offersCompant"
+            app:destination="@id/offersCompant" />
+        <action
+            android:id="@+id/action_homeMain_to_showPostOnley"
+            app:destination="@id/showPostOnley" />
+    </fragment>
+    <fragment
+        android:id="@+id/information2"
+        android:name="com.teraninja.guard.Information"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information" >
+        <action
+            android:id="@+id/action_information2_to_userProfile"
+            app:destination="@id/userProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfile"
+        android:name="com.teraninja.guard.UserProfile"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" >
+        <argument
+            android:name="token"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_userProfile_to_updateProfileGuard"
+            app:destination="@id/updateProfileGuard" />
+        <action
+            android:id="@+id/action_userProfile_to_information2"
+            app:destination="@id/information2" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffRequest"
+        android:name="com.teraninja.guard.StaffRequest"
+        android:label="fragment_staff_request"
+        tools:layout="@layout/fragment_staff_request" >
+        <action
+            android:id="@+id/action_staffRequest_to_showOllStaff"
+            app:destination="@id/showOllStaff" />
+    </fragment>
+    <fragment
+        android:id="@+id/showOllStaff"
+        android:name="com.teraninja.guard.ShowOllStaff"
+        android:label="fragment_show_oll_staff"
+        tools:layout="@layout/fragment_show_oll_staff" >
+        <argument
+            android:name="Job_title"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="Qualification"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="Experience"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="English_language_level"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="agefrom"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="ageto"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="city"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="gender"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="numberRequired"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_showOllStaff_to_employees"
+            app:destination="@id/employees" />
+        <action
+            android:id="@+id/action_showOllStaff_to_filterGuardWthiCompany"
+            app:destination="@id/filterGuardWthiCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileCompany"
+        android:name="com.teraninja.guard.ProfileCompany"
+        android:label="fragment_profile_company"
+        tools:layout="@layout/fragment_profile_company" >
+        <action
+            android:id="@+id/action_profileCompany_to_upditeProfileCompany"
+            app:destination="@id/upditeProfileCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitJobOffer"
+        android:name="com.teraninja.guard.SubmitJobOffer"
+        android:label="fragment_submit_job_offer"
+        tools:layout="@layout/fragment_submit_job_offer" >
+        <argument
+            android:name="idguard"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/notifications3"
+        android:name="com.teraninja.guard.notifications"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/technicalSupport"
+        android:name="com.teraninja.guard.TechnicalSupport"
+        android:label="fragment_technical_support"
+        tools:layout="@layout/fragment_technical_support" />
+    <fragment
+        android:id="@+id/messages2"
+        android:name="com.teraninja.guard.messages"
+        android:label="fragment_messages"
+        tools:layout="@layout/fragment_messages" />
+    <fragment
+        android:id="@+id/employees"
+        android:name="com.teraninja.guard.Employees"
+        android:label="fragment_employees"
+        tools:layout="@layout/fragment_employees" >
+        <action
+            android:id="@+id/action_employees_to_submitJobOffer"
+            app:destination="@id/submitJobOffer" />
+        <action
+            android:id="@+id/action_employees_to_filterGuardWthiCompany"
+            app:destination="@id/filterGuardWthiCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileGuard"
+        android:name="com.teraninja.guard.updateProfileGuard"
+        android:label="fragment_update_profile_guard"
+        tools:layout="@layout/fragment_update_profile_guard" >
+        <action
+            android:id="@+id/action_updateProfileGuard_to_userProfile"
+            app:destination="@id/userProfile" />
+        <action
+            android:id="@+id/action_updateProfileGuard_to_updatePhone"
+            app:destination="@id/updatePhone" />
+        <action
+            android:id="@+id/action_updateProfileGuard_to_updatePassword"
+            app:destination="@id/updatePassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/offers"
+        android:name="com.teraninja.guard.offers"
+        android:label="fragment_offers"
+        tools:layout="@layout/fragment_offers" />
+    <fragment
+        android:id="@+id/offersCompant"
+        android:name="com.teraninja.guard.OffersCompant"
+        android:label="fragment_offers_compant"
+        tools:layout="@layout/fragment_offers_compant" >
+        <action
+            android:id="@+id/action_offersCompant_to_showOllguardAcceptOffer"
+            app:destination="@id/showOllguardAcceptOffer" />
+    </fragment>
+    <fragment
+        android:id="@+id/subscriptionsCompany"
+        android:name="com.teraninja.guard.SubscriptionsCompany"
+        android:label="fragment_subscriptions_company"
+        tools:layout="@layout/fragment_subscriptions_company" />
+    <fragment
+        android:id="@+id/subscribeguard"
+        android:name="com.teraninja.guard.Subscribeguard"
+        android:label="fragment_subscribeguard"
+        tools:layout="@layout/fragment_subscribeguard" />
+    <fragment
+        android:id="@+id/filterGuardWthiCompany"
+        android:name="com.teraninja.guard.filterGuardWthiCompany"
+        android:label="fragment_filter_guard_wthi_company"
+        tools:layout="@layout/fragment_filter_guard_wthi_company" >
+        <action
+            android:id="@+id/action_filterGuardWthiCompany_to_submitJobOffer"
+            app:destination="@id/submitJobOffer" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageCompany"
+        android:name="com.teraninja.guard.MessageCompany"
+        android:label="fragment_message_company"
+        tools:layout="@layout/fragment_message_company" />
+    <fragment
+        android:id="@+id/upditeProfileCompany"
+        android:name="com.teraninja.guard.UpditeProfileCompany"
+        android:label="fragment_updite_profile_company"
+        tools:layout="@layout/fragment_updite_profile_company" >
+        <action
+            android:id="@+id/action_upditeProfileCompany_to_profileCompany"
+            app:destination="@id/profileCompany" />
+        <action
+            android:id="@+id/action_upditeProfileCompany_to_updatePassword"
+            app:destination="@id/updatePassword" />
+        <action
+            android:id="@+id/action_upditeProfileCompany_to_updatePhone"
+            app:destination="@id/updatePhone" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostOnley"
+        android:name="com.teraninja.guard.ShowPostOnley"
+        android:label="fragment_show_post_onley"
+        tools:layout="@layout/fragment_show_post_onley" >
+        <action
+            android:id="@+id/action_showPostOnley_to_homeMain"
+            app:destination="@id/homeMain"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="time"
+            app:argType="string"
+            android:defaultValue="time" />
+        <argument
+            android:name="post"
+            app:argType="string"
+            android:defaultValue="post" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/updatePassword"
+        android:name="com.teraninja.guard.updatePassword"
+        android:label="fragment_update_password"
+        tools:layout="@layout/fragment_update_password" />
+    <fragment
+        android:id="@+id/updatePhone"
+        android:name="com.teraninja.guard.UpdatePhone"
+        android:label="fragment_update_phone"
+        tools:layout="@layout/fragment_update_phone" >
+        <action
+            android:id="@+id/action_updatePhone_to_updatePhoneByCode"
+            app:destination="@id/updatePhoneByCode" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePhoneByCode"
+        android:name="com.teraninja.guard.UpdatePhoneByCode"
+        android:label="fragment_update_phone_by_code"
+        tools:layout="@layout/fragment_update_phone_by_code" >
+        <action
+            android:id="@+id/action_updatePhoneByCode_to_upditeProfileCompany"
+            app:destination="@id/upditeProfileCompany" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="code"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_updatePhoneByCode_to_profileCompany"
+            app:destination="@id/profileCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/showOllguardAcceptOffer"
+        android:name="com.teraninja.guard.ShowguardAcceptOffer"
+        android:label="fragment_show_ollguard_accept_offer"
+        tools:layout="@layout/fragment_show_ollguard_accept_offer" >
+        <argument
+            android:name="Id"
+            app:argType="string"
+            android:defaultValue="default" />
+        <argument
+            android:name="type_Job_Id"
+            app:argType="string"
+            android:defaultValue="default" />
+        <action
+            android:id="@+id/action_showOllguardAcceptOffer_to_submitJobOffer"
+            app:destination="@id/submitJobOffer" />
+    </fragment>
+</navigation>

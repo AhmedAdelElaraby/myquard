@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash_One">
+
+    <fragment
+        android:id="@+id/splash_One"
+        android:name="com.teraninja.guard.UI.Splash_One"
+        android:label="fragment_splash__one"
+        tools:layout="@layout/fragment_splash__one" >
+        <action
+            android:id="@+id/action_splash_One_to_login2"
+            app:destination="@id/login2" />
+        <action
+            android:id="@+id/action_splash_One_to_createEmaiLookingForAjob"
+            app:destination="@id/createEmaiLookingForAjob" />
+        <action
+            android:id="@+id/action_splash_One_to_createEmailCompany"
+            app:destination="@id/createEmailCompany" />
+    </fragment>
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.teraninja.guard.UI.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login2_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+        <action
+            android:id="@+id/action_login2_to_verificationUser"
+            app:destination="@id/verificationUser" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.teraninja.guard.UI.ForgetPassword"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPassword_to_activateMessage"
+            app:destination="@id/activateMessage" />
+    </fragment>
+    <fragment
+        android:id="@+id/activateMessage"
+        android:name="com.teraninja.guard.UI.ActivateMessage"
+        android:label="fragment_activate_message"
+        tools:layout="@layout/fragment_activate_message" >
+        <action
+            android:id="@+id/action_activateMessage_to_createNewPassword"
+            app:destination="@id/createNewPassword" />
+        <argument
+            android:name="number"
+            app:argType="string"
+            android:defaultValue="Default" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNewPassword"
+        android:name="com.teraninja.guard.UI.CreateNewPassword"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password" >
+        <argument
+            android:name="code"
+            app:argType="string"
+            android:defaultValue="Default" />
+        <argument
+            android:name="phone"
+            app:argType="string"
+            android:defaultValue="Default" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEmaiLookingForAjob"
+        android:name="com.teraninja.guard.UI.CreateEmaiLookingForAjob"
+        android:label="fragment_create_emai_looking_for_ajob"
+        tools:layout="@layout/fragment_create_emai_looking_for_ajob" >
+        <action
+            android:id="@+id/action_createEmaiLookingForAjob_to_verificationUser"
+            app:destination="@id/verificationUser" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationUser"
+        android:name="com.teraninja.guard.UI.VerificationUser"
+        android:label="fragment_verification_user"
+        tools:layout="@layout/fragment_verification_user" >
+        <argument
+            android:name="number"
+            app:argType="string"
+            android:defaultValue="Default" />
+        <action
+            android:id="@+id/action_verificationUser_to_createEmaiLookingForAjob"
+            app:destination="@id/createEmaiLookingForAjob" />
+        <action
+            android:id="@+id/action_verificationUser_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createEmailCompany"
+        android:name="com.teraninja.guard.UI.CreateEmailCompany"
+        android:label="fragment_create_email_company"
+        tools:layout="@layout/fragment_create_email_company" >
+        <action
+            android:id="@+id/action_createEmailCompany_to_login2"
+            app:destination="@id/login2" />
+    </fragment>
+
+
+</navigation>

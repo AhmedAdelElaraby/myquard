@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/ic_person"
+            android:id="@+id/photomessage" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toEndOf="@id/photomessage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Orientation">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="visible"
+                android:gravity="start"
+
+                android:textSize="@dimen/_15sdp"
+                style="@style/text"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:id="@+id/text" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@drawable/style_button"
+
+
+                android:id="@+id/messageimage" />
+
+            <VideoView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+
+                android:visibility="gone"
+
+                android:id="@+id/videomessage" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/timemessagefield"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/notolkeaarabic_bold"
+            android:text="1010"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

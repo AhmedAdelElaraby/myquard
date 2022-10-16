@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UpdatePhoneByCode">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_backing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:id="@+id/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/update_number_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:textColor="#13718D"
+            android:textSize="20sp"
+            android:id="@+id/textpass" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_enter_the_code_sent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textpass"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:textStyle="bold"
+            android:theme="@style/text"
+
+            android:layout_marginStart="11dp"
+            android:id="@+id/textnumber" />
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/txt_pin_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:layoutDirection="ltr"
+            android:maxLength="6"
+
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textnumber"
+            app:pinAnimationType="popIn"
+
+
+            app:pinBackgroundIsSquare="true"
+            app:pinLineColors="#13718D"
+            app:pinLineStroke="2dp"
+            app:pinLineStrokeSelected="4dp"
+            app:pinTextBottomPadding="@dimen/_20sdp"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reternsendpassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_pin_entry"
+            android:layout_marginTop="25dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:theme="@style/text"
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:layout_marginStart="20dp"
+            android:id="@+id/reternsendpasswordtext" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/return_send_password"
+            app:layout_constraintStart_toEndOf="@id/reternsendpasswordtext"
+            app:layout_constraintTop_toBottomOf="@id/txt_pin_entry"
+            android:layout_marginTop="25dp"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:theme="@style/text"
+            android:fontFamily="@font/notolkeaarabic_bold"
+
+            android:layout_marginStart="20dp"
+            android:id="@+id/retern_send_password" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

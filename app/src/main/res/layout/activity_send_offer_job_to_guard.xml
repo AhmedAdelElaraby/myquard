@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SendOfferJobToGuard">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:src="@drawable/ic_backing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/textadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notolkeaarabic_bold"
+            android:text="@string/send_offer_jobs"
+            android:textColor="#13718D"
+            android:textSize="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back" />
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/style_button"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textadd">
+
+            <Spinner
+
+                android:id="@+id/namejob"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/style_button"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l1">
+
+            <Spinner
+                android:id="@+id/city"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="60dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/style_button"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l1">
+
+            <Spinner
+                android:id="@+id/district"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="60dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutsalary"
+            style="@style/text_input_style"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/salary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Salary"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:inputType="number"
+
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutworkday"
+            style="@style/text_input_style"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/the_number_of_working_days"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutsalary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numofworddays"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:inputType="number"
+
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTextLayoutworking_hours"
+            style="@style/text_input_style"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:hint="@string/working_hours"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutworkday">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/working_hours"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notolkeaarabic_bold"
+                android:inputType="number"
+
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/l4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/style_button"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputTextLayoutworking_hours">
+
+            <Spinner
+                android:id="@+id/restwork"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/last_dates"
+            android:background="@drawable/style_button"
+
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="start|center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/last_date_to_accept"
+            android:padding="@dimen/_10sdp"
+            android:fontFamily="@font/notolkeaarabic_bold"
+            style="@style/text"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l4"
+            tools:ignore="RtlSymmetry" />
+
+
+        <LinearLayout
+            android:id="@+id/l5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/style_button"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/last_dates">
+
+            <Spinner
+                android:id="@+id/watherwork"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_100sdp"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@drawable/style_button"
+    android:backgroundTint="@null"
+    android:gravity="top|start"
+    android:paddingStart="@dimen/_10sdp"
+    android:padding="@dimen/_3sdp"
+
+    android:backgroundTintMode="add"
+    android:id="@+id/detise"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/l5"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/SendOfferJob"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/style_buttonsignup"
+            android:elevation="3dp"
+            android:fontFamily="@font/notolkeaarabic_bold"
+            android:includeFontPadding="false"
+            android:text="@string/send_offer_job"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:backgroundTintMode="add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detise" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
